@@ -1,6 +1,6 @@
 using System;
 
-class Indumentaria
+public class Indumentaria
 {
     public string Medias{get; private set;}
     public string Pantalon{get; private set;}
