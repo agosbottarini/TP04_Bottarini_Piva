@@ -1,0 +1,41 @@
+
+
+<form action='@Url.Action("GuardarIndumentaria", "Home")'>
+
+<div> 
+ @foreach (string equipo in ViewBag.ListaEquipos)
+    {
+        <tr>
+            <td>@equipo</td>
+        </tr>
+    }
+</div>
+<br><br>
+<div>
+@foreach (string medias in ViewBag.ListaMedias)
+    {
+        <tr>
+            <td> <img src='/img/Medias/@medias' style="width 190" height="190"></td>
+        </tr>
+    }
+</div>
+<br><br>
+<div>
+@foreach (string pantalon in ViewBag.ListaPantalones)
+    {
+        <tr>
+            <td style="width 10%"> <img src='/img/Pantalones/@pantalon' style="width 180" height="180"></td>
+        </tr>
+    }
+</div>
+<br><br>
+<div>
+@foreach (string camisetas in ViewBag.ListaCamisetas)
+    {
+        <tr>
+            <td style="width 10%"> <img src='/img/Camisetas/@camisetas' style="width 180" height="180"></td>
+        </tr>
+    }  
+</div>
+
+</form>
