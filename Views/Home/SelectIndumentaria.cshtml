@@ -9,15 +9,20 @@
             <td>@equipo</td>
         </tr>
     }
+    <br><br>
+    <label>Elegi un equipo:</label>
+    <input type="number">
 </div>
 <br><br>
 <div>
 @foreach (string medias in ViewBag.ListaMedias)
     {
         <tr>
-            <td> <img src='/img/Medias/@medias' style="width 190" height="190"></td>
+            <td> <img src='/img/Medias/@medias' style="width 180" height="180"></td>
         </tr>
     }
+    <br>
+    <input type="number">
 </div>
 <br><br>
 <div>
@@ -27,15 +32,20 @@
             <td style="width 10%"> <img src='/img/Pantalones/@pantalon' style="width 180" height="180"></td>
         </tr>
     }
+    <br>
+    <input type="number">
 </div>
 <br><br>
 <div>
 @foreach (string camisetas in ViewBag.ListaCamisetas)
     {
         <tr>
-            <td style="width 10%"> <img src='/img/Camisetas/@camisetas' style="width 180" height="180"></td>
+            <td style="width 10%"> <img src='/img/Camisetas/@camisetas' style="width 210" height="210"></td>
         </tr>
-    }  
+    } 
+    <br>
+    <input type="number">
 </div>
-
+<br><br>
+<input type="submit" Crear Indumentaria>
 </form>
