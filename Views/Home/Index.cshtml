@@ -2,4 +2,22 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>TP XX - Index</h1>
+<a href= '@Url.Action("SelectIndumentaria")'> Agregar indumentaria </a> 
+<br><br>
+
+<table style="width 100%">
+    <tr>
+        <th style="width 25%">Equipos</th>
+        <th style="width 25%">Camisetas</th>
+        <th style="width 25%">Medias</th>
+        <th style="width 25%">Pantalon</th>
+    </tr>
+    @foreach (string equipo in ViewBag.DicIndumentaria.Keys)
+    {
+        <tr>
+            <td> @equipo </td>
+            <td> <img src='/img/@ViewBag.DicIndumentaria[equipo].Medias' img></td>
+        </tr>
+    }
+
+<h1>Pagina Web Piva-Bottarini</h1>
