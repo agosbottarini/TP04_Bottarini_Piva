@@ -2,6 +2,8 @@
 
 <form action='@Url.Action("GuardarIndumentaria", "Home")'>
 
+
+
 <div> 
  @foreach (string equipo in ViewBag.ListaEquipos)
     {
@@ -11,29 +13,34 @@
     }
     <br><br>
     <label>Elegi un equipo:</label>
-    <input type="number" name="Equipo">
+    <input type="number" name="Equipo" required min="1" max= @ViewBag.ListaEquipos.Count>
 </div>
 <br><br>
 <div>
+@{
+    int i = 1;   
+}
 @foreach (string medias in ViewBag.ListaMedias)
     {
+                
         <tr>
+            <p>@i = i + 1</p>
             <td> <img src='/img/Medias/@medias' style="width 180" height="180"></td>
         </tr>
     }
     <br>
-    <input type="number" name="Media">
+    <input type="number" name="Media" required min="1" max= @ViewBag.ListaEquipos.Count >
 </div>
 <br><br>
 <div>
 @foreach (string pantalon in ViewBag.ListaPantalones)
     {
         <tr>
-            <td style="width 10%"> <img src='/img/Pantalones/@pantalon' style="width 180" height="180"></td>
+            <td style="width 10%"> <img src='/img/Pantalones/@pantalon' style="width 200" height="200"></td>
         </tr>
     }
     <br>
-    <input type="number" name="Pantalon">
+    <input type="number" name="Pantalon" required min="1" max= @ViewBag.ListaEquipos.Count>
 </div>
 <br><br>
 <div>
@@ -44,7 +51,7 @@
         </tr>
     } 
     <br>
-    <input type="number" name="Camiseta">
+    <input type="number" name="Camiseta" required min="0" max= @ViewBag.ListaEquipos.Count>
 </div>
 <br><br>
 <input type="submit" value="Crear Indumentaria">

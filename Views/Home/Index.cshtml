@@ -2,7 +2,7 @@
     ViewData["Title"] = "Index";
 }
 
-<a href= '@Url.Action("SelectIndumentaria")'> Agregar indumentaria </a> 
+<a href= '@Url.Action("SelectIndumentaria")'> Agregar indumentaria</a> 
 <br><br>
 
 <table style="width 100%">
@@ -16,9 +16,10 @@
     {
         <tr>
             <td> @equipo </td>
-            <td> <img src='/img/@ViewBag.DicIndumentaria[equipo].Medias'></td>
-            <td> <img src='/img/@ViewBag.DicIndumentaria[equipo].Pantalones'></td>
-            <td> <img src='/img/@ViewBag.DicIndumentaria[equipo].Camisetas'></td>
+            <td> <img src='/img/Camisetas/@ViewBag.DicIndumentaria[equipo].Camiseta' style="width 210" height="210"></td>
+            <td> <img src='/img/Medias/@ViewBag.DicIndumentaria[equipo].Medias' style="width 180" height="180"></td>
+            <td> <img src='/img/Pantalones/@ViewBag.DicIndumentaria[equipo].Pantalon' style="width 180" height="180"></td>
+            
         </tr>
     }
 

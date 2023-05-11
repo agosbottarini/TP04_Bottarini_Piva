@@ -7,7 +7,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         ViewBag.DicIndumentaria = Equipos.EquiposIndumentaria;
-        return View();
+        return View();  
     }
 
     public IActionResult SelectIndumentaria()
@@ -21,10 +21,11 @@ public class HomeController : Controller
 
     public IActionResult GuardarIndumentaria (int Equipo, int Media, int Pantalon, int Camiseta)
     {
-        Indumentaria nuevaIndumentaria = new Indumentaria(Equipos.ListaMedias[Media], Equipos.ListaPantalones[Pantalon], Equipos.ListaCamisetas[Camiseta]);
+        Indumentaria nuevaIndumentaria = new Indumentaria(Equipos.ListaMedias[Media-1], Equipos.ListaPantalones[Pantalon-1], Equipos.ListaCamisetas[Camiseta-1]);
         
-        Equipos.EquiposIndumentaria.Add(Equipos.ListaEquipos[Equipo], nuevaIndumentaria);
+        Equipos.EquiposIndumentaria.Add(Equipos.ListaEquipos[Equipo-1], nuevaIndumentaria);
 
+        ViewBag.DicIndumentaria = Equipos.EquiposIndumentaria;
         return View("Index");
     }
 }
